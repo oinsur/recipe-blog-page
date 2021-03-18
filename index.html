@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Omar's third project on devchallenge.io">
+  <meta name="keywords" content="html, css, flex, bem, responsive">
+  <meta name="author" content="Omar Insurriaga">
+  <title>Recipe Blog</title>
+  <link rel="stylesheet" href="./styles.css">
+  <!--Google material icons-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div class="page">
+    <!--Header section with title and description-->
+    <header class="header">
+        <h1 class="header__title">Classic Cheesecake Recipe</h1>
+        <section class="header__description">
+          <img src="./6dots.svg" alt="6 dots">
+          <p class="header__description-text">Look no further for a creamy and ultra smooth classic 
+            cheesecake recipe! Paired with a buttery graham cracker crust, no one can deny its simple decadence. 
+            For the best results, bake in a water bath.</p>
+        </section>
+    </header>
+    <!--main container for the blog content-->
+    <main class="content">
+      <img src="./photo1.png" alt="cheesecake" class="content__image">
+      <!---->
+      <section class="content__post">
+        <h2 class="content__post-title">Ingredients</h2>
+        <p class="content__post-subtitle">Graham Cracker Crust</p>
+        <ul class="content__post-items">
+          <li><input type="checkbox">
+          <p class="content__post-item">1 and 1/2 cups (150g) <span>graham cracker crumbs</span> 
+            (about 10 full sheet graham crackers)</p></li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">
+      created by <span>oinsur</span> - devChallenges.io
+    </footer>
+  </div>
+</body>
+</html>
