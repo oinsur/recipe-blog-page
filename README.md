@@ -68,7 +68,7 @@ This application/site was created as a submission to a [DevChallenges](https://d
 
 <!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For exmpale -->
 
-- [Child and sibling selector](https://css-tricks.com/child-and-sibling-selectors/)
+- [Child and sibling selectors](https://css-tricks.com/child-and-sibling-selectors/)
 
 ## Contact
 
