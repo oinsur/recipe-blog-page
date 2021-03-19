@@ -16,10 +16,10 @@ body {
 }
 
 .page {
-  max-width: 968px;
+  max-width: 1440px;
   max-height: 100%;
   margin: 0 auto;
-  padding: 3% 0 2%;
+  padding: 3% 16% 2%;
   background-color: #FFF;
   color: #000;
 }
@@ -27,7 +27,6 @@ body {
 /*header styles*/
 .header {
   width: 100%;
-  margin-bottom: 43px;
 }
 
 .header__title {
@@ -46,24 +45,31 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 16px;
+  line-height: 17px;
   font-style: italic;
   margin-left: 12px;
   width: 70%;
+}
+
+.header__image {
+  width: 100%;
+  margin-top: 43px;
+  margin-bottom: 20px;
+  border-radius: 12px;
 }
 
 /*styles for main elements which uses the Montesrrat font
 consistently throughout the layout*/
 .content {
   font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: space-between;
 }
 
-.content__image {
-  width: 100%;
-}
 
 /*styles used in most of the text*/
 .content__post {
-  width: 56%;
+  width: 60%;
   font-size: 14px;
   font-weight: 400;
 }
@@ -72,7 +78,7 @@ consistently throughout the layout*/
   font-family: 'Playfair Display', serif;
   font-size: 24px;
   font-weight: 700;
-  margin-top: 48px;
+  margin-top: 28px;
 }
 
 .content__post-subtitle {
@@ -90,7 +96,15 @@ consistently throughout the layout*/
 
 .content__post-items li {
   display: flex;
+  align-items: baseline;
+  margin-top: 10px;
 }
+
+/*this is to move the third list item in the first check list down*/
+.content__post-items li.sugar {
+  margin-top: 14px;
+  margin-bottom: 38px;
+} 
 
 .content__post-item {
   font-size: 16px;
@@ -101,9 +115,121 @@ consistently throughout the layout*/
 .content__post-item span {
   font-weight: 700;
 }
+
+/*this will adjust the space between the numbered steps*/
+.step {
+  margin-bottom: 40px;
+}
+
+/*this will adjust the space of the first step*/
+.step:first-of-type {
+  margin-bottom: 31px;
+}
+
+/*this will adjust the space of the second step*/
+.step:nth-of-type(2) {
+  margin-bottom: 22px;
+}
+
+.step:last-of-type {
+  margin-bottom: 57px;
+}
+/*these are the styles for the suggested toppings*/
+.content__post-item span.toppings {
+  font-weight: 500;
+  font-style: italic;
+}
+
+/*these are the styles for the instructions in the blog*/
+
+/*these are the styles for the numbered boxes*/
+.content__post-number {
+  width: 44px;
+  height: 36px;
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  text-align: center;
+  color: #FFF;
+  background-color: #F2994A;
+  font-weight: 700;
+  border-radius: 6px; 
+}
+
+/*this will select a paragraph next to the post number to apply styles*/
+.content__post-number ~ p {
+  width: 100%;
+  margin-left: 15px;
+  align-self: flex-start;
+  line-height: 19.5px;
+}
+
+.content__source {
+  font-size: 16px;
+  font-style: italic;
+  color: #BDBDBD;
+  text-decoration: none;
+}
+
+/*this will let the source match the mobile design*/
+br {
+  display: none;
+}
+
+/*icon list styles*/
+.content__icons {
+  width: 25%;
+  list-style-type: none;
+  margin-top: 94px;
+}
+
+.icon-item {
+  margin-bottom: 42px;
+}
+#serving-icon {
+  color: #F2994A;
+  font-size: 2em;
+}
+
+#clock-icon {
+  color: #4F4F4F;
+  font-size: 2em;
+}
+
+/*this will add a scale effect to the icons*/
+#serving-icon:hover, #clock-icon:hover {
+  transform: scale(1.5);
+  transition: transform .5s ease;
+}
+/*this will arrange the icons with their text items*/
+.content__icons li {
+  display: flex;
+}
+/*text items next to icons*/
+.content__text-items {
+  list-style-type: none;
+  margin-left: 14px;
+  text-transform: uppercase;
+}
+
+.heading {
+  font-size: 10px;
+  font-weight: 700;
+  color: #BDBDBD;
+}
+
+.subheading {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.subheading:first-of-type {
+  color: #F2994A;
+}
+
 /*footer styles*/
 .footer {
-  margin-top: 20%;
+  margin-top: 93px;
   font-family: 'Montserrat', sans-serif;
   color: #828282;
   text-align: center;
@@ -115,7 +241,83 @@ consistently throughout the layout*/
   text-decoration: underline;
   font-weight: 700;
 }
-/*
-font-family: 'Montserrat', sans-serif;
-font-family: 'Playfair Display', serif;
-*/
+
+/*media queries*/
+@media screen and (max-width: 768px) {
+  .page {
+    padding: 3% 4% 2%;
+  }
+  .header__title {
+    font-size: 24px;
+  }
+  .header__description-text {
+    width: 100%;
+  }
+  .header__image {
+    margin-top: 23px;
+    margin-bottom: 24px;
+  }
+  /*main is reverse column so icons are first*/
+  .content {
+    flex-direction: column-reverse;
+  }
+  .content__icons {
+    margin-top: 0;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .content__icons li:first-of-type {
+    width: 100%;
+  }
+  .icon-item {
+    margin-bottom: 28px;
+  }
+  #serving-icon {
+    font-size: 1.5em;
+  }
+  #clock-icon {
+    font-size: 1.5em;
+  }
+  .heading {
+    font-size: 8px;
+  }
+  .subheading {
+    font-size: 10px;
+  }
+  /*mobile styles for the blog entries*/
+  .content__post-title {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .content__post-subtitle {
+    font-size: 16px;
+    margin-top: 13px;
+  }
+  .content__post {
+    width: 100%;
+  }
+  .content__post-items {
+    margin-top: 24px;
+  }
+  .content__post-item {
+    font-size: 14px;
+    margin-left: 8px;
+  }
+  .content__post-topping {
+    width: 90%;
+  }
+  li.step p {
+    font-size: 16px;
+    width: 78%;
+  }
+  .content__source {
+    font-size: 12px;
+  }
+  br {
+    display: inline;
+  }
+}
+
+
